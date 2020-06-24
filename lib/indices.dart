@@ -14,7 +14,7 @@ class _IndicesState extends State<Indices> {
       backgroundColor: Colors.white,
       body: SizedBox(
           height: MediaQuery.of(context).size.height,
-          child: Stock_ListView(stocks: Stock.get())
+          child: Stock_ListView(stocks: Stock.get())   //list will be displayed
       ),
     );
   }

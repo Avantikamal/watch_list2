@@ -23,14 +23,14 @@ class Stock_ListView extends StatelessWidget {
 
         final stock=stocks[index];
 
-        Color changeColor(index){
+        Color changeColor(index){                            //alternate colored items
           if(index % 2==0)
             return Colors.green;
           else
             return Colors.red;
         }
 
-        Icon changeIcon(index){
+        Icon changeIcon(index){                                //for difference in icon
           if(index % 2==0)
             return Icon(Icons.keyboard_arrow_up,color: changeColor(index),size: 20.0,);
           else
@@ -41,7 +41,7 @@ class Stock_ListView extends StatelessWidget {
 
 
         return ListTile(
-          contentPadding: EdgeInsets.all(10),
+          contentPadding: EdgeInsets.all(10.0),
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -84,19 +84,17 @@ class Stock_ListView extends StatelessWidget {
               fontWeight: FontWeight.w500),
               ),
                 changeIcon(index),
+//          Column(
+//            children: <Widget>[
+//              changeIcon(index),
+//               changeIcon(index),
+//            ],
+//          )
 
-//              Column(
-//
-//                children: <Widget>[
-//
-//                changeIcon(index),
-//
-//                changeIcon(index),
-//
-//              ],
-////
 
-//              )
+
+
+
             ],
 
           ),
