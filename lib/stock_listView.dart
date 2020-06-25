@@ -32,9 +32,9 @@ class Stock_ListView extends StatelessWidget {
 
         Icon changeIcon(index){                                //for difference in icon
           if(index % 2==0)
-            return Icon(Icons.keyboard_arrow_up,color: changeColor(index),size: 20.0,);
+            return Icon(Icons.keyboard_arrow_up,color: changeColor(index),size: 15.0,);
           else
-            return Icon(Icons.keyboard_arrow_down,color: changeColor(index),size: 20.0,);
+            return Icon(Icons.keyboard_arrow_down,color: changeColor(index),size: 15.0,);
         }
 
 
@@ -59,53 +59,45 @@ class Stock_ListView extends StatelessWidget {
             ],
           ),
           trailing: Column(
+
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
         Text("${stock.price}",
         style: TextStyle(color: Colors.black,
-        fontSize: 25,
+        fontSize: 21,
         fontWeight: FontWeight.w800),),
-        SizedBox(height: 4.0,),
-
-
-        Container(
-          height: 15.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-                Icon ( Icons.keyboard_arrow_up,
-              color: changeColor(index),
-              size: 20,),
-
-              Text('75.60(0.65%)',
-              style: TextStyle(color: changeColor(index),
-              fontSize: 14,
-              fontWeight: FontWeight.w500),
-              ),
-                changeIcon(index),
-//          Column(
-//            children: <Widget>[
-//              changeIcon(index),
-//               changeIcon(index),
-//            ],
-//          )
 
 
 
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+              Icon ( Icons.keyboard_arrow_up,
+            color: changeColor(index),
+            size: 15,),
 
+            Text('75.60(0.65%)',
+            style: TextStyle(color: changeColor(index),
+            fontSize: 14,
+            fontWeight: FontWeight.w500),
+            ),
 
-            ],
+        Column(
+          children: <Widget>[
+            changeIcon(index),
+            changeIcon(index),
+          ],
+        )
+          ],
 
-          ),
         ),
 
 
         ]),);
       },
    
-    )
-    ;
+    );
    
   }
 }
