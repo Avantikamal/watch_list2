@@ -43,6 +43,7 @@ class Stock_ListView extends StatelessWidget {
         return ListTile(
           contentPadding: EdgeInsets.all(10.0),
           title: Column(
+
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text("${stock.company}",
@@ -67,7 +68,7 @@ class Stock_ListView extends StatelessWidget {
         fontSize: 21,
         fontWeight: FontWeight.w800),),
 
-
+//SizedBox(height: 1.0,),
 
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -82,18 +83,13 @@ class Stock_ListView extends StatelessWidget {
             fontSize: 14,
             fontWeight: FontWeight.w500),
             ),
+              changeIcon(index),
 
-        Column(
-          children: <Widget>[
-            changeIcon(index),
-            changeIcon(index),
-          ],
-        )
           ],
 
         ),
 
-
+        changeIcon(index),
         ]),);
       },
    
